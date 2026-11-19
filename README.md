@@ -51,12 +51,19 @@ perpustakaan/
 ## Struktur Database (`perpustakaan.sql`)
 `settings`, `buku`, `riwayat`. Tabel `buku` dan `riwayat` hanya berisi `data` dan `lock_data` (ciphertext).
 
-## Tampilan
+## Tampilan (Mode Terbuka / Plaintext)
 | Dashboard | Data Buku |
 |---|---|
 | ![Dashboard](images/01-dashboard.jpeg) | ![Data Buku](images/02-data-buku.jpeg) |
 | **Tambah Buku** | **Riwayat Aktivitas** |
 | ![Tambah Buku](images/03-tambah-buku.jpeg) | ![Riwayat](images/04-riwayat-aktivitas.jpeg) |
 
+## Tampilan (Mode Terkunci / Ciphertext)
+| Dashboard (Ciphertext) | Data Buku (Ciphertext) |
+|---|---|
+| ![Dashboard Ciphertext](images/05-cipher-dashboard.png) | ![Data Buku Ciphertext](images/06-cipher-data-buku.png) |
+| **Riwayat Aktivitas (Ciphertext)** | **Info Kriptografi (Ciphertext)** |
+| ![Riwayat Ciphertext](images/07-cipher-riwayat.png) | ![Info Ciphertext](images/08-cipher-info.png) |
+
 ## Link Kode Program
-https://github.com/rismagistiani8-png/perpustakaan-app
+[https://github.com/rismagistiani8-png/perpustakaan-app](https://github.com/rismagistiani8-png/perpustakaan-app)
