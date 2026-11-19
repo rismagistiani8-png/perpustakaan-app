@@ -1,0 +1,8 @@
+# Rahasia & data lokal: jangan di-commit
+storage/master.key.php
+storage/app.sqlite
+
+# Cadangan & sampah editor/OS
+*.bak*
+.DS_Store
+Thumbs.db

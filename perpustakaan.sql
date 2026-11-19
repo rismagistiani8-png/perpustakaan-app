@@ -3,7 +3,7 @@
 CREATE DATABASE IF NOT EXISTS perpustakaan CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE perpustakaan;
 
--- Konfigurasi: public key RSA, salt PBKDF2, record uji login (tanpa kunci rahasia)
+-- Konfigurasi: public key RSA dan record uji login (check_data & check_lock). Tanpa kunci rahasia.
 CREATE TABLE IF NOT EXISTS settings (
   k VARCHAR(50) NOT NULL PRIMARY KEY,
   v MEDIUMTEXT NULL
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS settings (
 
 -- Data buku: seluruh field (kode, judul, pengarang, dst.) ada di dalam `data` (ciphertext)
 -- data      = AES-256-GCM(JSON buku, DEK acak)
--- lock_data = AES-256-GCM(RSA-OAEP(DEK, public key), KEK dari passphrase)
+-- lock_data = AES-256-GCM(RSA-OAEP(DEK, public key), KEK = kunci simetris server)
 CREATE TABLE IF NOT EXISTS buku (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   data MEDIUMTEXT NOT NULL,
@@ -25,11 +25,4 @@ CREATE TABLE IF NOT EXISTS riwayat (
   data MEDIUMTEXT NOT NULL,
   lock_data TEXT NOT NULL,
   created_at VARCHAR(40) NOT NULL
-) ENGINE=InnoDB;
-
--- Pembatasan percobaan login
-CREATE TABLE IF NOT EXISTS attempts (
-  ip VARCHAR(45) NOT NULL,
-  t INT UNSIGNED NOT NULL,
-  KEY idx_ip (ip)
 ) ENGINE=InnoDB;
