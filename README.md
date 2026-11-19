@@ -61,9 +61,9 @@ perpustakaan/
 ## Tampilan (Mode Terkunci / Ciphertext)
 | Dashboard (Ciphertext) | Data Buku (Ciphertext) |
 |---|---|
-| ![Dashboard Ciphertext](images/05-cipher-dashboard.png) | ![Data Buku Ciphertext](images/06-cipher-data-buku.png) |
+| ![Dashboard Ciphertext](images/images05-cipher-dashboard.png.jpeg) | ![Data Buku Ciphertext](images/images06-cipher-data-buku.png.jpeg) |
 | **Riwayat Aktivitas (Ciphertext)** | **Info Kriptografi (Ciphertext)** |
-| ![Riwayat Ciphertext](images/07-cipher-riwayat.png) | ![Info Ciphertext](images/08-cipher-info.png) |
+| ![Riwayat Ciphertext](images/images07-cipher-riwayat.png.jpeg) | ![Info Ciphertext](images/images08-cipher-info.png.jpeg) |
 
 ## Link Kode Program
-[https://github.com/rismagistiani8-png/perpustakaan-app](https://github.com/rismagistiani8-png/perpustakaan-app)
+https://github.com/rismagistiani8-png/perpustakaan-app
